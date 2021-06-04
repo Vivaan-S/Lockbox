@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+	 crossorigin="anonymous" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+
+<script>
+
+
+	window.onload = function(){
+		document.getElementById('genbutton').onclick = function(){
+			window.location.href = '/generate';
+		};
+
+	};
+		function hidemodal(){
+			var element = document.getElementById('myModal');
+			element.classList.add("whiteidden");
+		};
+
+
+</script>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+		body {
+			font-family: 'Poppins';
+			color: #222;
+			background: #fff;
+			display: block;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.container {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+
+		}
+
+		input {
+			position: relative;
+			background: #eee;
+			font-family: 'Poppins';
+			border: none;
+			outline: none;
+			padding: 10px 30px;
+			border-radius: 30px;
+			margin: 0;
+		}
+
+		a {
+			padding: 8px 20px;
+			border-radius: 30px;
+			margin: 0;
+			background: #435dee;
+			color: #fff;
+			opacity: 0.9;
+			transition: opacity 0.3s;
+		}
+
+		.gen {
+			background: #435dee;
+			display: grid;
+			width: 10%;
+			margin: auto;
+			margin-top: 30px;
+			color: #fff;
+			opacity: 0.9;
+			border-radius: 30px;
+			transition: opacity 0.3s;
+		}
+
+		a:hover {
+			opacity: 1;
+		}
+
+		.amount {
+			display: grid;
+			margin: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border-radius: 30px;
+		}
+
+		.modal-container * {
+			box-sizing: border-box;
+		}
+
+		.modal-container {
+			font-family: 'Poppins';
+			background: #ddd;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			margin: 0;
+		}
+
+		input {
+			border-radius: 50px;
+			border: none;
+			background-color: #eee;
+		}
+
+		input:focus {
+			outline: none;
+		}
+
+		.modal-container {
+			position: fixed;
+			background: rgba(0, 0, 0, 0.3);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		.modal-container.show {
+			pointer-events: auto;
+			opacity: 1;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+
+		.modal {
+			background: #fff;
+			padding: 30px 60px;
+			width: 600px;
+			max-width: 100%;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			text-align: center;
+			margin: 30px;
+		}
+
+		.close, .gen{
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.whiteidden{
+			background: #fff;
+			color: #fff;
+			box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+			opacity: 0;
+		}
+		html{
+			cursor: pointer;
+		}
+	</style>
+
+  <script>
+    
+  </script>
+
+	<title>Lockbox - Secure Password Generator</title>
+</head>
+
+<body>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+    <h1>Welcome to Lockbox!</h1>
+		<div id='firstt' class="firsttime"><p>
+      Lockbox is a safe to use password generator. To get started just hit generate! You can save your password to your clipboard by pressing the copy button beside your generated password. 
+    </p>
+
+    <a href="javascript:hidemodal();" class="close">Got it!</a>
+  </div>
+		</div>
+
+</div>
+	<div class="container">
+  		<h1 class="title">Lockbox</h1>
+  		<p>Generate a secure password and never get hacked again!</p>
+
+
+    <a class="gen" id="genbutton">
+      Generate
+    </a>
+  </div>
+
+
+</body>
+</html>
